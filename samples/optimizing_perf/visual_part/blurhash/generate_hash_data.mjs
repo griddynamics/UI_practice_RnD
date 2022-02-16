@@ -25,7 +25,7 @@ async function generateHashes(imgPaths, imgFolder) {
             const {blurhash} = await generateHash(adjustedPath);
             const serializedImgData = {
                 ...blurhash,
-                url: `/public${adjustedPath}`,
+                url: `public${adjustedPath}`,
             };
             hashes.push(serializedImgData);
         } catch (error) {
