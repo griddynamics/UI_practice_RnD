@@ -19,7 +19,7 @@ function addImages(fileContent, hashes) {
     const imagesMarkup = hashes.map(({url}, i) => `<img class="app__canvas_area" alt="picture_${i}" src="${url}" />`).join('\n');
     const bodyStart = fileContent.indexOf('<body>');
     const bodyEnd = fileContent.indexOf('</body>');
-    const newMarkup = `${fileContent.slice(0, bodyStart)}<body><div class="app__gallery">${imagesMarkup}</div>${fileContent.slice(bodyEnd)}`;
+    const newMarkup = `${fileContent.slice(0, bodyStart)}<body><h3>A demo raw images</h3><div class="app__gallery">${imagesMarkup}</div>${fileContent.slice(bodyEnd)}`;
 
     return newMarkup;
 }
