@@ -2,7 +2,6 @@ const {
     injectImagesGallery, getDirFiles, copyFile, WEBP_IMAGES_FOLDER, RAW_IMAGES_INDEX_FILE, readFile,
     WEBP_IMAGES_INDEX_FILE, JPEG_IMAGES_FOLDER, writeFile, convertPicturesToWebp
 } = require('./common');
-const webp = require('webp-converter');
 
 async function main() {
     await convertPicturesToWebp(JPEG_IMAGES_FOLDER, WEBP_IMAGES_FOLDER, 50);

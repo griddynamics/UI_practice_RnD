@@ -32,10 +32,6 @@ function getDirFiles(dirName) {
     return fs.readdirSync(dirName).sort();
 }
 
-function createAvifImages(inputFolder, outputFolder) {
-    const inputFiles = getDirFiles(inputFolder);
-}
-
 function getFileName(filePath) {
     return path.parse(filePath).name;
 }
@@ -59,8 +55,6 @@ const WEBP_IMAGES_INDEX_FILE = 'index-webp.html';
 
 module.exports = {
     copyFile,
-    createGalleryHtml,
-    getFileName,
     convertPicturesToWebp,
     JPEG_IMAGES_FOLDER,
     AVIF_IMAGES_FOLDER,
