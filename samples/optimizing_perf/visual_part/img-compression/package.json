@@ -7,6 +7,7 @@
     "inject:gallery:raw": "node inject-raw-gallery.js",
     "create:img:avif": "avif --input=jpeg-img/*.jpeg --output=./avif-img --overwrite=true --verbose",
     "create:gallery:avif": "npm run create:img:avif && node create-avif-gallery.js",
+    "create:gallery:avif-lazy": "npm run create:img:avif && USE_LAZY_LOADING=true OUTPUT_INDEX_FILE='index-avif-lazy.html' GALLERY_NAME='Avif lazy gallery' node create-avif-gallery.js",
     "create:gallery:webp": "node create-webp-gallery.js",
     "start:dev": "http-server ./ -p 3000"
   },

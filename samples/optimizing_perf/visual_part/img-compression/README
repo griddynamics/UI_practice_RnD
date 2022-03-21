@@ -7,6 +7,7 @@ The POC **isn't production ready** and serves the informational purpose only.
 * Place your unoptimized images (assumed `jpeg`) at `/jpeg-img`.
 * `npm run inject:gallery:raw` to generate a `jpeg` images gallery html in `index.html`.
 * `npm run create:gallery:avif` to generate a gallery of `avif` images.
+* `npm run create:gallery:avif-lazy` to generate a gallery of `avif` images loaded lazily.
 * `npm run create:gallery:webp` to generate a gallery of `webp` images.
 * `npm run start:dev` to launch a web server. Navigate to:
 -- `localhost:3000/index.html` to access a page version with `jpeg` images

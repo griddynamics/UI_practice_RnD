@@ -10,13 +10,13 @@ function writeFile(fileName, content) {
     return fs.writeFileSync(path.resolve(`./${fileName}`), content);
 }
 
-function createGalleryHtml(pictureFiles, imgFolder) {
-    return pictureFiles.map(fileName => `<div class="app__picture"><img src="${imgFolder}/${fileName}" alt="picture_${fileName}"/></div>`).join('');
+function createGalleryHtml(pictureFiles, imgFolder, shouldLoadLazily) {
+    return pictureFiles.map(fileName => `<div class="app__picture"><img src="${imgFolder}/${fileName}" alt="picture_${fileName}"${shouldLoadLazily ? ' loading="lazy"' : ''}/></div>`).join('');
 }
 
-function injectImagesGallery(pictureFiles, imgFolder, indexFile) {
+function injectImagesGallery(pictureFiles, imgFolder, indexFile, shouldLoadLazily=false) {
     let indexHtml = readFile(indexFile);
-    const imagesHtml = createGalleryHtml(pictureFiles, imgFolder);
+    const imagesHtml = createGalleryHtml(pictureFiles, imgFolder, shouldLoadLazily);
     const START_MARKER = '<!--GALLERY:START-->';
     const startMarkerIdx = indexHtml.indexOf(START_MARKER);
     const endMarkerIdx = indexHtml.indexOf('<!--GALLERY:END-->');
