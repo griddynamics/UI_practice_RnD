@@ -1,0 +1,27 @@
+{
+  "name": "img-compression",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "inject:gallery:raw": "node inject-raw-gallery.js",
+    "create:img:avif": "avif --input=jpeg-img/*.jpeg --output=./avif-img --overwrite=true --verbose",
+    "create:gallery:avif": "npm run create:img:avif && node create-avif-gallery.js",
+    "create:gallery:avif-lazy": "npm run create:img:avif && USE_LAZY_LOADING=true OUTPUT_INDEX_FILE='index-avif-lazy.html' GALLERY_NAME='Avif lazy gallery' node create-avif-gallery.js",
+    "create:gallery:webp": "node create-webp-gallery.js",
+    "start:dev": "http-server ./ -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=12.13"
+  },
+  "dependencies": {
+    "avif": "^0.1.0",
+    "http-server": "^14.1.0",
+    "install": "^0.13.0",
+    "npm": "^8.5.5",
+    "webp-converter": "^2.3.3"
+  }
+}
