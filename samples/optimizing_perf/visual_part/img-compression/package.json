@@ -9,6 +9,7 @@
     "create:gallery:avif": "npm run create:img:avif && node create-avif-gallery.js",
     "create:gallery:avif-lazy": "npm run create:img:avif && USE_LAZY_LOADING=true OUTPUT_INDEX_FILE='index-avif-lazy.html' GALLERY_NAME='Avif lazy gallery' node create-avif-gallery.js",
     "create:gallery:webp": "node create-webp-gallery.js",
+    "create:gallery:video": "node create-video-gallery.js",
     "start:dev": "http-server ./ -p 3000"
   },
   "keywords": [],
