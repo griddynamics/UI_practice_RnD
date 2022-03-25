@@ -1,6 +1,9 @@
 ## Avif and Webp demo
 
-This is a proof of concept illustrating the benefits of using [`webp`](https://web.dev/serve-images-webp/) and [`avif`](https://web.dev/compress-images-avif/) image compression formats .
+This is a proof of concept illustrating the benefits of compressing image and video assets and applying a lazy loading strategy when loading pictures:
+* [`webp`](https://web.dev/serve-images-webp/)
+* [`avif`](https://web.dev/compress-images-avif/)
+* `gif` to `video` (mp4)
 The POC **isn't production ready** and serves the informational purpose only.
 
 ## Usage manual
@@ -9,10 +12,13 @@ The POC **isn't production ready** and serves the informational purpose only.
 * `npm run create:gallery:avif` to generate a gallery of `avif` images.
 * `npm run create:gallery:avif-lazy` to generate a gallery of `avif` images loaded lazily.
 * `npm run create:gallery:webp` to generate a gallery of `webp` images.
+* `npm run create:gallery:video` to generate a gallery of `video` elements.
 * `npm run start:dev` to launch a web server. Navigate to:
 -- `localhost:3000/index.html` to access a page version with `jpeg` images
--- `localhost:3000/index-avif.html` to access a a page version with `avif` images
--- `localhost:3000/index-webp.html` to access a a page version with `webp` images
+-- `localhost:3000/index-avif.html` to access a page version with `avif` images
+-- `localhost:3000/index-webp.html` to access a page version with `webp` images
+-- `localhost:3000/index-gif.html` to access a page version with `gif` images
+-- `localhost:3000/index-video.html` to access a page version with `video` elements
 
 ## Verifying performance results
 * Use [`PageSpeed Insights`](https://pagespeed.web.dev/) to compare three versions (`jpeg`, `avif`, `webp`).
