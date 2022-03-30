@@ -1,0 +1,17 @@
+{
+  "name": "animations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "http-server ./ -p 3000",
+    "generate:animation:jitter": "node create-jitter-animation.js",
+    "generate:animation:optimized": "node create-optimized-animation.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}

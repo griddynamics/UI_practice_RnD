@@ -13,7 +13,7 @@
     grid-row-gap: 5px;
 }
 
-.app__picture img {
+.app__picture img, video {
     object-fit: cover;
     width: 100%;
     height: 100%;
