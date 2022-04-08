@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.generateButton,
+.settingsButton {
+    color: var(--primary-light);
+    border: 1px solid var(--secondary-light);
+    cursor: pointer;
+    background: none;
+    font: inherit;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.generateButton {
+    border-radius: 4px 0 0 4px;
+    padding: 8px 12px;
+}
+
+.settingsButton {
+    padding: 4px 12px;
+    border-radius: 0 4px 4px 0;
+    left: -1px;
+    position: relative;
+}
+
+.settingsIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.generateButton:hover,
+.settingsButton:hover,
+.settingsButtonActive {
+    z-index: 1;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.settingsButton:hover .settingsIcon,
+.settingsButtonActive .settingsIcon {
+    fill: var(--accent-color);
+}
+
+.settingsOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+.settingsForm {
+    position: absolute;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: var(--primary-light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 264px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.field:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.inputContainer {
+    display: flex;
+}
+
+.label,
+.input {
+    color: var(--secondary-dark);
+    font: inherit;
+}
+
+.input {
+    background: none;
+    box-shadow: none;
+    border: 1px solid var(--secondary-dark);
+    width: 34px;
+}
+
+.input:focus,
+.input:hover,
+.inputDecrement:hover,
+.inputIncrement:hover {
+    outline: none;
+    border: 1px solid var(--accent-color);
+    z-index: 1;
+    color: var(--accent-color);
+}
+
+.inputDecrement,
+.inputIncrement {
+    border: 1px solid var(--secondary-dark);
+    background: none;
+    cursor: pointer;
+    position: relative;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputDecrement {
+    right: -1px;
+    border-radius: 4px 0 0 4px;
+}
+
+.inputIncrement {
+    left: -1px;
+    border-radius: 0 4px 4px 0;
+}
