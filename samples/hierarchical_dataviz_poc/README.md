@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Hierarhical dataviz POC
+This app allows you to quickly evaluate different hierarchical data visualization options.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Deployed version available [here](https://poc-hierarchical-dataviz.vercel.app/).
+
+Related article is [here](https://docs.google.com/document/d/1lF7LXhm_AfqptZQ8JqchAQmTHspyK_AE1zMxdR6AC3g/edit?usp=sharing).
+
 
 ## Available Scripts
 
