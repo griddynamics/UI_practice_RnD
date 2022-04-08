@@ -1,0 +1,49 @@
+.layoutRoot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-dark);
+}
+
+.nav {
+    width: 100%;
+    height: var(--header-height);
+    background: var(--secondary-dark);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 0 12px;
+    flex-shrink: 0;
+}
+
+.navLink {
+    padding: 6px 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.rightSection {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.fileInput {
+    white-space: nowrap;
+}
+
+.randomDataGenerator {
+    margin-right: 10px;
+}
+
+.questionIcon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-light);
+}
+
+.navLink:not(:last-child) {
+    margin-right: 12px;
+}
